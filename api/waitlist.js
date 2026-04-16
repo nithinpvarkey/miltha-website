@@ -1,5 +1,4 @@
 export default async function handler(req, res) {
-  // Only allow POST
   if (req.method !== 'POST') {
     return res.status(405).json({
       error: 'Method not allowed'
@@ -9,7 +8,7 @@ export default async function handler(req, res) {
   try {
     const { email, honeypot } = req.body;
 
-    // Honeypot check — bots fill this
+    // Honeypot check
     if (honeypot) {
       return res.status(200).json({ success: true });
     }
@@ -22,30 +21,43 @@ export default async function handler(req, res) {
       });
     }
 
-    // Save to Vercel KV
-    const { kv } = await import('@vercel/kv');
+    // Save to Upstash Redis
+    const url = process.env.UPSTASH_REDIS_REST_URL;
+    const token = process.env.UPSTASH_REDIS_REST_TOKEN;
 
     const timestamp = new Date().toISOString();
-    const key = `waitlist:${email}`;
 
     // Check if already exists
-    const existing = await kv.get(key);
-    if (existing) {
+    const checkRes = await fetch(
+      `${url}/get/waitlist:${email}`,
+      { headers: { Authorization: `Bearer ${token}` }}
+    );
+    const checkData = await checkRes.json();
+
+    if (checkData.result) {
       return res.status(200).json({
         success: true,
         message: 'Already on waitlist'
       });
     }
 
-    // Save email with timestamp
-    await kv.set(key, {
-      email,
-      timestamp,
-      source: 'website'
+    // Save email
+    await fetch(`${url}/set/waitlist:${email}`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        result: JSON.stringify({ email, timestamp })
+      })
     });
 
-    // Add to list for easy retrieval
-    await kv.lpush('waitlist:all', email);
+    // Add to list
+    await fetch(`${url}/lpush/waitlist:all/${email}`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}` }
+    });
 
     return res.status(200).json({
       success: true,

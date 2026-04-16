@@ -1,12 +1,18 @@
 export default async function handler(req, res) {
-  // Simple auth check
   const { secret } = req.query;
   if (secret !== process.env.ADMIN_SECRET) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
 
-  const { kv } = await import('@vercel/kv');
-  const emails = await kv.lrange('waitlist:all', 0, -1);
+  const url = process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+
+  const response = await fetch(
+    `${url}/lrange/waitlist:all/0/-1`,
+    { headers: { Authorization: `Bearer ${token}` }}
+  );
+  const data = await response.json();
+  const emails = data.result || [];
 
   return res.status(200).json({
     count: emails.length,
