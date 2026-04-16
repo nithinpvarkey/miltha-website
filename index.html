@@ -291,10 +291,6 @@
         text-transform: uppercase;
         letter-spacing: 0.08em;
     }
-    .tally-form-container {
-        overflow: hidden;
-        position: relative;
-    }
 </style>
 </head>
 <body class="antialiased selection:bg-primary-container selection:text-on-primary">
@@ -627,30 +623,50 @@
     <p class="mt-8 text-xl text-on-surface-variant max-w-2xl font-light leading-relaxed" style="position:relative;z-index:1;">
         Turn a single video into 30 days of high-converting content. No more staring at a blank screen. Just click record, and let our agents do the rest.
     </p>
-    <div style="max-width:420px;margin:32px auto 0;display:flex;flex-direction:column;gap:16px;position:relative;z-index:1;">
-      <iframe
-        data-tally-src="https://tally.so/embed/ODBaNK?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-        loading="lazy"
-        width="100%"
-        height="56"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
-        style="border-radius:999px;overflow:hidden;"
-        title="Join the Miltha AI Waitlist">
-      </iframe>
-      <div style="display:flex;align-items:center;gap:10px;justify-content:center;">
-        <div style="display:flex;">
-          <div style="width:28px;height:28px;border-radius:50%;background:#8B5CF6;border:2px solid #000;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:white;">M</div>
-          <div style="width:28px;height:28px;border-radius:50%;background:#14B8A6;border:2px solid #000;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:white;margin-left:-6px;">P</div>
-          <div style="width:28px;height:28px;border-radius:50%;background:#F59E0B;border:2px solid #000;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:white;margin-left:-6px;">N</div>
-        </div>
-        <span style="font-size:12px;color:#9ca3af;">
-          <strong style="color:#dedbc8;">347+</strong>
-          creators on the waitlist
-        </span>
+    <form onsubmit="handleWaitlist(event)"
+      style="max-width:420px;margin:32px auto 0;position:relative;z-index:1;">
+      <div style="display:flex;gap:0;
+        border-radius:999px;overflow:hidden;
+        background:rgba(255,255,255,0.05);
+        border:1px solid rgba(255,255,255,0.1);">
+        <input
+          type="email"
+          id="waitlist-email"
+          placeholder="Enter your email address"
+          required
+          maxlength="254"
+          autocomplete="email"
+          style="flex:1;background:transparent;
+            border:none;outline:none;padding:14px 20px;
+            color:#e2e2e2;font-family:Almarai,sans-serif;
+            font-size:14px;"
+        />
+        <input
+          type="text"
+          name="website_url"
+          id="website_url"
+          style="display:none;position:absolute;left:-9999px;"
+          tabindex="-1"
+          autocomplete="off"
+        />
+        <button type="submit"
+          id="waitlist-btn"
+          style="background:#fbf7e4;color:#323124;
+            border:none;padding:14px 24px;
+            font-family:Almarai,sans-serif;
+            font-weight:800;font-size:12px;
+            letter-spacing:0.08em;cursor:pointer;
+            white-space:nowrap;">
+          Get Early Access
+        </button>
       </div>
-    </div>
+      <div id="waitlist-success"
+        style="display:none;margin-top:12px;
+          text-align:center;color:#14B8A6;
+          font-size:13px;font-family:Almarai,sans-serif;">
+        ✓ You are on the list. We will notify you at launch.
+      </div>
+    </form>
 </section>
 
 <!-- Problem Section -->
@@ -1012,30 +1028,50 @@
     <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8 text-primary">The future of content <br> is <span class="font-serif italic font-light">autonomous</span>.</h2>
         <p class="text-xl text-gray-400 mb-12 max-w-xl mx-auto font-light">Join the waitlist to receive our exclusive repurposing framework while you wait for the beta.</p>
-        <div style="max-width:420px;margin:32px auto 0;display:flex;flex-direction:column;gap:16px;">
-          <iframe
-            data-tally-src="https://tally.so/embed/ODBaNK?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-            loading="lazy"
-            width="100%"
-            height="56"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            style="border-radius:999px;overflow:hidden;"
-            title="Join the Miltha AI Waitlist">
-          </iframe>
-          <div style="display:flex;align-items:center;gap:10px;justify-content:center;">
-            <div style="display:flex;">
-              <div style="width:28px;height:28px;border-radius:50%;background:#8B5CF6;border:2px solid #000;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:white;">M</div>
-              <div style="width:28px;height:28px;border-radius:50%;background:#14B8A6;border:2px solid #000;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:white;margin-left:-6px;">P</div>
-              <div style="width:28px;height:28px;border-radius:50%;background:#F59E0B;border:2px solid #000;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:white;margin-left:-6px;">N</div>
-            </div>
-            <span style="font-size:12px;color:#9ca3af;">
-              <strong style="color:#dedbc8;">347+</strong>
-              creators on the waitlist
-            </span>
+        <form onsubmit="handleWaitlist(event)"
+          style="max-width:420px;margin:32px auto 0;">
+          <div style="display:flex;gap:0;
+            border-radius:999px;overflow:hidden;
+            background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.1);">
+            <input
+              type="email"
+              id="waitlist-email"
+              placeholder="Enter your email address"
+              required
+              maxlength="254"
+              autocomplete="email"
+              style="flex:1;background:transparent;
+                border:none;outline:none;padding:14px 20px;
+                color:#e2e2e2;font-family:Almarai,sans-serif;
+                font-size:14px;"
+            />
+            <input
+              type="text"
+              name="website_url"
+              id="website_url"
+              style="display:none;position:absolute;left:-9999px;"
+              tabindex="-1"
+              autocomplete="off"
+            />
+            <button type="submit"
+              id="waitlist-btn"
+              style="background:#fbf7e4;color:#323124;
+                border:none;padding:14px 24px;
+                font-family:Almarai,sans-serif;
+                font-weight:800;font-size:12px;
+                letter-spacing:0.08em;cursor:pointer;
+                white-space:nowrap;">
+              Get Early Access
+            </button>
           </div>
-        </div>
+          <div id="waitlist-success"
+            style="display:none;margin-top:12px;
+              text-align:center;color:#14B8A6;
+              font-size:13px;font-family:Almarai,sans-serif;">
+            ✓ You are on the list. We will notify you at launch.
+          </div>
+        </form>
     </div>
 </section>
 
@@ -1091,10 +1127,9 @@
     async function handleWaitlist(e) {
         e.preventDefault();
 
-        var email = document.getElementById('waitlist-email') ?
-            document.getElementById('waitlist-email').value.trim() : '';
-        var honeypot = document.getElementById('website_url') ?
-            document.getElementById('website_url').value : '';
+        const email = document.getElementById('waitlist-email').value.trim();
+        const honeypot = document.getElementById('website_url').value;
+        const btn = document.getElementById('waitlist-btn');
 
         if (!email) return;
 
@@ -1103,28 +1138,31 @@
             return;
         }
 
-        try {
-            var btn = e.target.querySelector('button');
-            if (btn) { btn.textContent = 'Joining...'; btn.disabled = true; }
+        btn.textContent = 'Joining...';
+        btn.disabled = true;
 
-            var response = await fetch('/api/waitlist', {
+        try {
+            const response = await fetch('/api/waitlist', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: email, honeypot: honeypot })
+                body: JSON.stringify({ email, honeypot })
             });
 
-            var data = await response.json();
+            const data = await response.json();
 
             if (data.success) {
-                var successEl = document.getElementById('waitlist-success');
-                if (successEl) successEl.style.display = 'block';
-                if (document.getElementById('waitlist-email'))
-                    document.getElementById('waitlist-email').value = '';
-                if (btn) { btn.textContent = 'Get Early Access'; btn.disabled = false; }
+                document.getElementById('waitlist-success').style.display = 'block';
+                document.getElementById('waitlist-email').value = '';
+                btn.textContent = 'Get Early Access';
+                btn.disabled = false;
+                setTimeout(() => {
+                    document.getElementById('waitlist-success').style.display = 'none';
+                }, 5000);
             }
         } catch (error) {
             console.error('Error:', error);
-            if (btn) { btn.textContent = 'Get Early Access'; btn.disabled = false; }
+            btn.textContent = 'Get Early Access';
+            btn.disabled = false;
         }
     }
 
@@ -1240,18 +1278,6 @@
             el.addEventListener('click', function(e) { e.preventDefault(); switchTab('product'); });
         });
     });
-</script>
-<script>
-var d=document,w="https://tally.so/widgets/embed.js",
-v=function(){"undefined"!=typeof Tally?
-Tally.loadEmbeds():d.querySelectorAll(
-"iframe[data-tally-src]:not([src])")
-.forEach((function(e){e.src=e.dataset.tallySrc}))};
-if("undefined"!=typeof Tally)v();
-else if(d.querySelector('script[src="'+w+'"]')==null){
-var s=d.createElement("script");
-s.src=w;s.onload=v;s.onerror=v;
-d.body.appendChild(s);}
 </script>
 </body>
 </html>
