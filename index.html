@@ -1088,25 +1088,44 @@
     }
 
     // Waitlist form handler
-    function handleWaitlistSubmit(e) {
+    async function handleWaitlist(e) {
         e.preventDefault();
+
+        var email = document.getElementById('waitlist-email') ?
+            document.getElementById('waitlist-email').value.trim() : '';
+        var honeypot = document.getElementById('website_url') ?
+            document.getElementById('website_url').value : '';
+
+        if (!email) return;
+
         if (!checkRateLimit('waitlist')) {
             alert('Too many attempts. Please wait a minute.');
-            return false;
+            return;
         }
-        var form = e.target;
-        var honeypot = form.querySelector('[name="website_url"]');
-        if (honeypot && honeypot.value !== '') return false;
-        var emailInput = form.querySelector('[type="email"]');
-        if (!emailInput) return false;
-        var email = sanitizeEmail(emailInput.value);
-        if (!email || !/^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/.test(email)) {
-            alert('Please enter a valid email address.');
-            return false;
+
+        try {
+            var btn = e.target.querySelector('button');
+            if (btn) { btn.textContent = 'Joining...'; btn.disabled = true; }
+
+            var response = await fetch('/api/waitlist', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email, honeypot: honeypot })
+            });
+
+            var data = await response.json();
+
+            if (data.success) {
+                var successEl = document.getElementById('waitlist-success');
+                if (successEl) successEl.style.display = 'block';
+                if (document.getElementById('waitlist-email'))
+                    document.getElementById('waitlist-email').value = '';
+                if (btn) { btn.textContent = 'Get Early Access'; btn.disabled = false; }
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            if (btn) { btn.textContent = 'Get Early Access'; btn.disabled = false; }
         }
-        emailInput.value = '';
-        alert('You\'re on the list! We\'ll be in touch.');
-        return false;
     }
 
     // Tab switching
