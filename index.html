@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Miltha AI — AI Content Distribution Engine</title>
+<title>Miltha AI — AI Content Distribution Engine for Creators | Get the Playbook</title>
 
 <!-- Security headers -->
 <meta http-equiv="X-Frame-Options" content="DENY">
@@ -13,14 +13,16 @@
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 <!-- Primary SEO -->
-<meta name="description" content="Upload one video. Get 30 days of content across Twitter, LinkedIn and YouTube automatically. In your voice. The AI Agent Playbook for Content Creators — $15.">
+<meta name="description" content="Upload one video. Get 30 days of content across Twitter, LinkedIn and YouTube — in your voice. The AI Agent Playbook for Content Creators. $15.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Nithin P. Varkey">
 <meta name="keywords" content="AI content distribution, content creator AI, AI agents for creators, content repurposing AI, Miltha AI">
 <link rel="canonical" href="https://miltha.ai">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://miltha.ai">
-<meta property="og:title" content="Miltha AI — Upload once. Grow everywhere.">
+<meta property="og:title" content="Miltha AI — Upload once. Grow everywhere. In your voice.">
 <meta property="og:description" content="The AI content distribution engine that turns one video into 30 days of platform-native content.">
 <meta property="og:image" content="https://miltha.ai/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -41,11 +43,21 @@
   "@type": "WebSite",
   "name": "Miltha AI",
   "url": "https://miltha.ai",
-  "description": "AI Content Distribution Engine",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://miltha.ai/?q={search_term}",
-    "query-input": "required name=search_term"
+  "description": "AI Content Distribution Engine for Content Creators"
+}
+</script>
+
+<!-- Schema.org: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Nithin P. Varkey",
+  "jobTitle": "Founder",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Miltha AI",
+    "url": "https://miltha.ai"
   }
 }
 </script>
@@ -536,7 +548,7 @@
                 <span class="material-symbols-outlined text-primary text-3xl">hub</span>
                 <div>
                     <h3 class="text-2xl font-bold mb-4">Agencies</h3>
-                    <p class="text-on-surface-variant text-sm">Scale your client fulfillment by 10x using proprietary agentic workflows.</p>
+                    <p class="text-on-surface-variant text-sm">Run content for 10 clients without hiring a 10-person team. One system, every brand.</p>
                 </div>
             </div>
         </div>
@@ -567,7 +579,7 @@
             </div>
         </div>
         <div class="border-l-2 border-primary/20 pl-8 space-y-4">
-            <p class="text-xl title-italic leading-relaxed text-on-surface">"The digital auteur philosophy is the future. This is the only playbook that treats content as an asset, not a chore."</p>
+            <p class="text-xl title-italic leading-relaxed text-on-surface">"Chapter 9 stopped me cold. I had already spent 80 hours building my own system. Then I read this and realized I had been doing it the hard way."</p>
             <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-xs font-bold text-primary">NR</div>
                 <div>
@@ -618,12 +630,12 @@
         <span class="text-[0.6875rem] font-extrabold uppercase tracking-widest text-primary-container">Launching Soon</span>
     </div>
     <h1 class="text-[3.5rem] md:text-[5rem] font-bold tracking-tighter leading-tight max-w-4xl text-primary" style="position:relative;z-index:1;">
-        One word. <span class="font-serif italic font-light">Every</span> platform. Your voice.
+        Upload once. <span class="font-serif italic font-light">Grow</span> everywhere. Your voice.
     </h1>
     <p class="mt-8 text-xl text-on-surface-variant max-w-2xl font-light leading-relaxed" style="position:relative;z-index:1;">
-        Turn a single video into 30 days of high-converting content. No more staring at a blank screen. Just click record, and let our agents do the rest.
+        Upload one video. Get a full 30-day content calendar for Twitter, LinkedIn, and YouTube — written in your exact voice. No blank screens. No wasted Sundays.
     </p>
-    <form onsubmit="handleWaitlist(event)"
+    <form id="waitlist-form" onsubmit="handleWaitlist(event)"
       style="max-width:420px;margin:32px auto 0;position:relative;z-index:1;">
       <div style="display:flex;gap:0;
         border-radius:999px;overflow:hidden;
@@ -678,7 +690,7 @@
                 <span class="font-serif italic font-light text-on-surface-variant">Nobody</span> sees it.
             </h2>
             <p class="mt-8 text-xl text-gray-400 font-light max-w-lg">
-                The algorithm rewards volume, but humans reward quality. Most creators fail because they can't do both. Miltha AI bridges the gap.
+                The algorithm demands volume. You can't keep up alone. Miltha posts 30 days of platform-native content from one upload — in your voice.
             </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -718,7 +730,7 @@
             <div class="relative p-12 rounded-xl bg-surface-container border border-outline-variant/5">
                 <div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary font-bold mb-8">03</div>
                 <h3 class="text-xl font-bold mb-4">Distribute</h3>
-                <p class="text-gray-400 font-light">Schedule everything across X, LinkedIn, and Instagram with one click. Sit back and watch the growth.</p>
+                <p class="text-gray-400 font-light">Miltha posts everything at peak times on X, LinkedIn, and YouTube. You approved it once. It runs for 30 days.</p>
             </div>
         </div>
     </div>
@@ -766,9 +778,9 @@
         </div>
         <div class="mt-12 bg-surface-container-high p-8 rounded-xl max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
             <p class="text-on-surface-variant font-light text-center md:text-left">
-                Our proprietary agent pipeline mimics a <span class="font-bold text-primary">top-tier media agency</span>, handling everything from semantic analysis to post-optimization.
+                Five specialized agents work in sequence. Each one handles what would take you <span class="font-bold text-primary">hours to do manually</span> — from transcript to published post.
             </p>
-            <button class="whitespace-nowrap text-primary-container border border-primary-container/20 px-8 py-3 rounded-full hover:bg-primary-container hover:text-on-primary transition-all">Explore the Engine</button>
+            <button class="whitespace-nowrap text-primary-container border border-primary-container/20 px-8 py-3 rounded-full hover:bg-primary-container hover:text-on-primary transition-all" onclick="document.getElementById('btn-playbook').click()">Read the Playbook</button>
         </div>
     </div>
 </section>
@@ -800,7 +812,7 @@
             <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
                 <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">hub</span>
                 <h4 class="font-bold text-lg mb-2">Multi-Platform</h4>
-                <p class="text-gray-500 text-sm font-light">Seamless formatting for LinkedIn, Instagram, and more.</p>
+                <p class="text-gray-500 text-sm font-light">Native formatting for LinkedIn, X, and YouTube. No copy-paste. No manual reformatting.</p>
             </div>
             <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
                 <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">analytics</span>
@@ -848,7 +860,7 @@
             <div class="p-12 rounded-xl bg-surface-container-low bloom-shadow border border-outline-variant/5 text-center">
                 <span class="material-symbols-outlined text-4xl text-primary mb-6">timer</span>
                 <h4 class="font-bold text-lg mb-2">Any Duration</h4>
-                <p class="text-gray-500 font-light">From 30-second shorts to 3-hour podcasts.</p>
+                <p class="text-gray-500 font-light">7 days, 15 days, or 30 days. Run your content calendar as long as you need.</p>
             </div>
             <div class="p-12 rounded-xl bg-surface-container-low bloom-shadow border border-outline-variant/5 text-center">
                 <span class="material-symbols-outlined text-4xl text-primary mb-6">dynamic_feed</span>
@@ -858,7 +870,7 @@
             <div class="p-12 rounded-xl bg-surface-container-low bloom-shadow border border-outline-variant/5 text-center">
                 <span class="material-symbols-outlined text-4xl text-primary mb-6">layers</span>
                 <h4 class="font-bold text-lg mb-2">Any Platform</h4>
-                <p class="text-gray-500 font-light">Custom logic for the nuances of every network.</p>
+                <p class="text-gray-500 font-light">Twitter, LinkedIn, YouTube — or all three. Pick your platforms. Change anytime.</p>
             </div>
         </div>
     </div>
@@ -937,7 +949,7 @@
                         <span class="text-gray-500 mb-2">/mo</span>
                     </div>
                     <span class="inline-block text-[0.6875rem] font-extrabold uppercase tracking-widest text-primary-container bg-surface-container px-3 py-1 rounded-full mb-4">3-day free trial</span>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">Perfect for solo creators getting started with AI content distribution.</p>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed">4 uploads per month. Your content finally goes up — without touching it yourself.</p>
                 </div>
                 <ul class="flex flex-col gap-4 mb-10 flex-1">
                     <li class="flex items-center gap-3 text-sm font-light"><span class="material-symbols-outlined text-primary-container text-[1.1rem]">check_circle</span> 4 video uploads per month</li>
@@ -966,7 +978,7 @@
                         <span class="text-gray-500 mb-2">/mo</span>
                     </div>
                     <span class="inline-block text-[0.6875rem] font-extrabold uppercase tracking-widest text-primary-container bg-surface-container-low px-3 py-1 rounded-full mb-4">3-day free trial</span>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">For serious creators who want to dominate every platform automatically.</p>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed">15 uploads per month. Full 30-day calendar. Every platform on autopilot.</p>
                 </div>
                 <ul class="flex flex-col gap-4 mb-10 flex-1">
                     <li class="flex items-center gap-3 text-sm font-light"><span class="material-symbols-outlined text-primary-container text-[1.1rem]">check_circle</span> 15 video uploads per month</li>
@@ -993,7 +1005,7 @@
                         <span class="text-gray-500 mb-2">/mo</span>
                     </div>
                     <span class="inline-block text-[0.6875rem] font-extrabold uppercase tracking-widest text-primary-container bg-surface-container px-3 py-1 rounded-full mb-4">3-day free trial</span>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">Built for agencies and teams managing multiple clients and brands.</p>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed">Unlimited uploads. Every client gets their own voice. Your team never burns out.</p>
                 </div>
                 <ul class="flex flex-col gap-4 mb-10 flex-1">
                     <li class="flex items-center gap-3 text-sm font-light"><span class="material-symbols-outlined text-primary-container text-[1.1rem]">check_circle</span> Unlimited video uploads</li>
@@ -1027,7 +1039,7 @@
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-primary-container/5 rounded-full blur-[120px] -z-10"></div>
     <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8 text-primary">The future of content <br> is <span class="font-serif italic font-light">autonomous</span>.</h2>
-        <p class="text-xl text-gray-400 mb-12 max-w-xl mx-auto font-light">Join the waitlist to receive our exclusive repurposing framework while you wait for the beta.</p>
+        <p class="text-xl text-gray-400 mb-12 max-w-xl mx-auto font-light">Be first when Miltha launches. Get founding member pricing — locked forever.</p>
         <form onsubmit="handleWaitlist(event)"
           style="max-width:420px;margin:32px auto 0;">
           <div style="display:flex;gap:0;
@@ -1123,13 +1135,18 @@
         return true;
     }
 
-    // Waitlist form handler
+    // Waitlist form handler — uses e.target so both forms work independently
     async function handleWaitlist(e) {
         e.preventDefault();
 
-        const email = document.getElementById('waitlist-email').value.trim();
-        const honeypot = document.getElementById('website_url').value;
-        const btn = document.getElementById('waitlist-btn');
+        var form = e.target;
+        var emailInput = form.querySelector('input[type="email"]');
+        var honeypotInput = form.querySelector('input[name="website_url"]');
+        var btn = form.querySelector('button[type="submit"]');
+        var successDiv = form.querySelector('[id="waitlist-success"]');
+
+        var email = emailInput ? emailInput.value.trim() : '';
+        var honeypot = honeypotInput ? honeypotInput.value : '';
 
         if (!email) return;
 
@@ -1151,13 +1168,16 @@
             const data = await response.json();
 
             if (data.success) {
-                document.getElementById('waitlist-success').style.display = 'block';
-                document.getElementById('waitlist-email').value = '';
+                if (successDiv) successDiv.style.display = 'block';
+                if (emailInput) emailInput.value = '';
                 btn.textContent = 'Get Early Access';
                 btn.disabled = false;
-                setTimeout(() => {
-                    document.getElementById('waitlist-success').style.display = 'none';
+                setTimeout(function() {
+                    if (successDiv) successDiv.style.display = 'none';
                 }, 5000);
+            } else {
+                btn.textContent = 'Get Early Access';
+                btn.disabled = false;
             }
         } catch (error) {
             console.error('Error:', error);
