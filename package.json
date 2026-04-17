@@ -2,6 +2,7 @@
   "name": "miltha-website",
   "version": "1.0.0",
   "dependencies": {
-    "@vercel/kv": "^1.0.0"
+    "@vercel/kv": "^1.0.0",
+    "playwright": "^1.59.1"
   }
 }
