@@ -151,6 +151,20 @@
     }
 </script>
 <style>
+    /* === MOBILE: Global overflow fix === */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+
+    @media (max-width: 768px) {
+      * {
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+    }
+
     body {
         background-color: #000000;
         color: #e2e2e2;
@@ -303,6 +317,117 @@
         text-transform: uppercase;
         letter-spacing: 0.08em;
     }
+
+    /* === MOBILE: Nav two-row layout === */
+    @media (max-width: 768px) {
+      nav .nav-inner {
+        flex-wrap: wrap;
+        padding: 12px 16px;
+        gap: 8px;
+      }
+
+      /* Tab button container — force to second row, full width, centered */
+      .nav-tabs {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      /* Logo stays on row 1 */
+      .nav-logo {
+        order: 1;
+      }
+
+      .nav-logo img {
+        height: 36px !important;
+      }
+
+      /* Tab buttons themselves */
+      nav button[id^="btn-"] {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+    }
+
+    /* === MOBILE: Headline size === */
+    @media (max-width: 768px) {
+      .headline-lg {
+        font-size: 2.2rem;
+      }
+    }
+
+    /* === MOBILE: Hero book mockup hide === */
+    @media (max-width: 1024px) {
+      .hero-book-col {
+        display: none;
+      }
+    }
+
+    /* === MOBILE: Blob sizes === */
+    @media (max-width: 768px) {
+      .hero-blob-1 { width: 260px; height: 260px; }
+      .hero-blob-2 { width: 200px; height: 200px; }
+      .hero-blob-3 { width: 150px; height: 150px; }
+    }
+
+    /* === MOBILE: Section padding === */
+    @media (max-width: 768px) {
+      .px-12 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+      .py-48 { padding-top: 6rem !important; padding-bottom: 6rem !important; }
+    }
+
+    /* === MOBILE: Who it is for (Playbook) === */
+    @media (max-width: 768px) {
+      .audience-playbook-grid > div {
+        height: auto !important;
+        min-height: 200px;
+        margin-top: 0 !important;
+      }
+    }
+
+    /* === MOBILE: Stats grid (Product problem section) === */
+    @media (max-width: 768px) {
+      .stats-product-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .stats-product-grid > div {
+        height: auto !important;
+        min-height: 120px;
+      }
+    }
+
+    /* === MOBILE: Footer links flex wrap === */
+    @media (max-width: 640px) {
+      .footer-links {
+        flex-wrap: wrap;
+        gap: 2rem !important;
+      }
+    }
+
+    /* === MOBILE: Waitlist form === */
+    @media (max-width: 480px) {
+      #waitlist-form > div,
+      .waitlist-form-inner {
+        flex-direction: column !important;
+        border-radius: 1rem !important;
+        overflow: visible !important;
+      }
+      #waitlist-form input[type="email"],
+      .waitlist-form-inner input[type="email"] {
+        border-radius: 999px !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+        margin-bottom: 8px;
+        padding: 14px 20px !important;
+      }
+      #waitlist-form button[type="submit"],
+      .waitlist-form-inner button[type="submit"] {
+        border-radius: 999px !important;
+        padding: 14px 20px !important;
+        width: 100%;
+      }
+    }
 </style>
 </head>
 <body class="antialiased selection:bg-primary-container selection:text-on-primary">
@@ -310,9 +435,11 @@
 
 <!-- Shared Navigation -->
 <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl shadow-[0_0_64px_rgba(222,219,200,0.04)]">
-    <div class="flex items-center gap-12 px-12 py-5 w-full max-w-[1920px] mx-auto">
-        <img src="./miltha-logo.svg" alt="Miltha AI" style="height:52px;width:auto;" />
-        <div class="flex items-center gap-10">
+    <div class="nav-inner flex items-center gap-12 px-12 py-5 w-full max-w-[1920px] mx-auto">
+        <span class="nav-logo" style="order:1;">
+            <img src="./miltha-logo.svg" alt="Miltha AI" style="height:52px;width:auto;" />
+        </span>
+        <div class="nav-tabs flex items-center gap-10">
             <button class="tab-btn active" id="btn-playbook">The Playbook</button>
             <button class="tab-btn" id="btn-product">MILTHA.<sub style="font-size:0.65em;vertical-align:sub;">Grow</sub></button>
         </div>
@@ -363,7 +490,7 @@
             </a>
         </div>
     </div>
-    <div class="lg:col-span-5 relative" style="z-index:1;">
+    <div class="hero-book-col lg:col-span-5 relative" style="z-index:1;">
         <div class="aspect-[4/5] bg-surface-container-low rounded-xl overflow-hidden bloom-shadow border border-outline-variant/10 group">
             <div class="book-cover-mockup transition-transform duration-700 group-hover:scale-105">
                 <div class="book-publisher">Miltha AI</div>
@@ -525,7 +652,7 @@
 <!-- Who it is for -->
 <section class="py-32 px-6 bg-surface-container-lowest">
     <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+        <div class="audience-playbook-grid grid grid-cols-1 lg:grid-cols-4 gap-4">
             <div class="bg-surface-container-low p-12 rounded-xl flex flex-col justify-between h-[400px] border border-outline-variant/10">
                 <span class="material-symbols-outlined text-primary text-3xl">smart_display</span>
                 <div>
@@ -699,7 +826,7 @@
                 The algorithm demands volume. You can't keep up alone. Miltha posts 30 days of platform-native content from one upload — in your voice.
             </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="stats-product-grid grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-surface-container-low p-8 rounded-xl bloom-shadow flex flex-col justify-between h-64 border border-outline-variant/5">
                 <span class="text-4xl font-bold text-primary-container">73%</span>
                 <p class="text-[0.6875rem] font-extrabold uppercase tracking-widest text-gray-500">Reach lost to lack of multi-platform strategy</p>
@@ -1104,7 +1231,7 @@
             <img src="./miltha-logo.svg" alt="Miltha AI" style="height:52px;width:auto;" class="mb-4" />
             <p class="text-[0.6875rem] font-extrabold uppercase tracking-[0.1em] text-gray-500">© 2025 Miltha AI. All rights reserved.</p>
         </div>
-        <div class="flex gap-16">
+        <div class="footer-links flex gap-16">
             <div class="flex flex-col gap-4">
                 <span class="text-[0.6875rem] font-extrabold uppercase tracking-[0.1em] text-gray-400">The Playbook</span>
                 <a class="text-[0.6875rem] font-extrabold uppercase tracking-[0.1em] text-gray-500 hover:text-[#DEDBC8] transition-colors footer-tab-playbook" href="#">Chapters</a>
