@@ -182,9 +182,9 @@
     .material-symbols-outlined {
         font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
-    .headline-lg { font-size: 3.5rem; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; }
+    .headline-lg { font-size: 3rem; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; }
     .title-italic { font-family: 'Instrument Serif', serif; font-style: italic; }
-    .label-caps { font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; }
+    .label-caps { font-size: 0.625rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; }
     .glass-shell { background: rgba(14, 14, 14, 0.6); backdrop-filter: blur(24px); }
     .glass-obsidian { background: rgba(31, 31, 31, 0.6); backdrop-filter: blur(20px); }
     .bloom-shadow { box-shadow: 0 0 64px rgba(222, 219, 200, 0.04); }
@@ -235,7 +235,7 @@
     /* Tab navigation */
     .tab-btn {
         font-family: 'Almarai', sans-serif;
-        font-size: 0.6875rem;
+        font-size: 0.625rem;
         font-weight: 800;
         text-transform: uppercase;
         letter-spacing: 0.1em;
@@ -289,7 +289,7 @@
     }
     .book-cover-mockup .book-title {
         color: #fbf7e4;
-        font-size: 1.4rem;
+        font-size: 1.25rem;
         font-weight: 800;
         text-align: center;
         line-height: 1.2;
@@ -298,7 +298,7 @@
         font-family: 'Instrument Serif', serif;
         font-style: italic;
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 0.95rem;
         color: #c9c6bc;
         text-align: center;
     }
@@ -310,7 +310,7 @@
     }
     .book-cover-mockup .book-meta {
         color: #939187;
-        font-size: 0.6875rem;
+        font-size: 0.625rem;
         font-weight: 700;
         text-align: center;
         line-height: 1.7;
@@ -354,8 +354,12 @@
     /* === MOBILE: Headline size === */
     @media (max-width: 768px) {
       .headline-lg {
-        font-size: 2.2rem;
+        font-size: 2rem !important;
       }
+      h2 { font-size: 1.5rem !important; }
+      body, p { font-size: 0.875rem; }
+      button, a[class*="rounded"] { font-size: 0.75rem; }
+      nav button, nav a { font-size: 0.625rem; }
     }
 
     /* === MOBILE: Hero book mockup hide === */
@@ -485,7 +489,7 @@
             <a href="https://checkout.dodopayments.com/buy/pdt_0Nd6EWxVSXm6A6iVjSe0j?quantity=1&redirect_url=https://miltha.vercel.app"
                target="_blank"
                rel="noopener noreferrer"
-               class="bg-primary text-on-primary px-10 py-5 rounded-full text-lg font-bold hover:scale-[1.02] transition-transform duration-300 bloom-shadow inline-block">
+               class="bg-primary text-on-primary px-10 py-5 rounded-full text-sm font-bold hover:scale-[1.02] transition-transform duration-300 bloom-shadow inline-block">
                 Get the Playbook — $15
             </a>
         </div>
@@ -509,15 +513,15 @@
     <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
             <div class="text-center md:text-left space-y-2">
-                <div class="text-5xl font-extrabold text-primary">73%</div>
+                <div class="text-3xl font-extrabold text-primary">73%</div>
                 <p class="text-sm label-caps text-on-surface-variant">of creators burn out within 18 months</p>
             </div>
             <div class="text-center md:text-left space-y-2">
-                <div class="text-5xl font-extrabold text-primary">10 Hours</div>
+                <div class="text-3xl font-extrabold text-primary">10 Hours</div>
                 <p class="text-sm label-caps text-on-surface-variant">spent weekly on manual repurposing</p>
             </div>
             <div class="text-center md:text-left space-y-2">
-                <div class="text-5xl font-extrabold text-primary">$0.06</div>
+                <div class="text-3xl font-extrabold text-primary">$0.06</div>
                 <p class="text-sm label-caps text-on-surface-variant">cost per automated content agent hour</p>
             </div>
         </div>
@@ -549,98 +553,98 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10">
         <div class="flex gap-4 group">
-            <div class="text-primary/20 text-2xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">01</div>
+            <div class="text-primary/20 text-xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">01</div>
             <div class="space-y-1">
                 <h4 class="font-bold text-sm">The Broken Creator Playbook</h4>
                 <p class="text-[11px] text-on-surface-variant leading-normal">Why creators burn out and what survivors do differently</p>
             </div>
         </div>
         <div class="flex gap-4 group">
-            <div class="text-primary/20 text-2xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">02</div>
+            <div class="text-primary/20 text-xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">02</div>
             <div class="space-y-1">
                 <h4 class="font-bold text-sm">Understanding AI Agents</h4>
                 <p class="text-[11px] text-on-surface-variant leading-normal">Tools vs Agents vs Systems — the difference that changes everything</p>
             </div>
         </div>
         <div class="flex gap-4 group">
-            <div class="text-primary/20 text-2xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">03</div>
+            <div class="text-primary/20 text-xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">03</div>
             <div class="space-y-1">
                 <h4 class="font-bold text-sm">The Creator Bottleneck</h4>
                 <p class="text-[11px] text-on-surface-variant leading-normal">Four problems destroying your growth, each needs a different fix</p>
             </div>
         </div>
         <div class="flex gap-4 group">
-            <div class="text-primary/20 text-2xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">04</div>
+            <div class="text-primary/20 text-xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">04</div>
             <div class="space-y-1">
                 <h4 class="font-bold text-sm">The 5-Agent Pipeline</h4>
                 <p class="text-[11px] text-on-surface-variant leading-normal">How Parser, Strategist, Writer, Scheduler and Growth work together</p>
             </div>
         </div>
         <div class="flex gap-4 group">
-            <div class="text-primary/20 text-2xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">05</div>
+            <div class="text-primary/20 text-xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">05</div>
             <div class="space-y-1">
                 <h4 class="font-bold text-sm">Build Your Own Agent System</h4>
                 <p class="text-[11px] text-on-surface-variant leading-normal">Step by step with real tools, real prompts, real costs</p>
             </div>
         </div>
         <div class="flex gap-4 group">
-            <div class="text-primary/20 text-2xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">06</div>
+            <div class="text-primary/20 text-xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">06</div>
             <div class="space-y-1">
                 <h4 class="font-bold text-sm">Prompt Engineering for Creators</h4>
                 <p class="text-[11px] text-on-surface-variant leading-normal">Five elements of a great prompt and the one that matters most</p>
             </div>
         </div>
         <div class="flex gap-4 group">
-            <div class="text-primary/20 text-2xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">07</div>
+            <div class="text-primary/20 text-xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">07</div>
             <div class="space-y-1">
                 <h4 class="font-bold text-sm">Tool Stack Deep-Dive</h4>
                 <p class="text-[11px] text-on-surface-variant leading-normal">What it actually costs to build this yourself</p>
             </div>
         </div>
         <div class="flex gap-4 group">
-            <div class="text-primary/20 text-2xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">08</div>
+            <div class="text-primary/20 text-xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">08</div>
             <div class="space-y-1">
                 <h4 class="font-bold text-sm">Handling Failures</h4>
                 <p class="text-[11px] text-on-surface-variant leading-normal">What breaks, when it breaks, how to fix it</p>
             </div>
         </div>
         <div class="flex gap-4 group">
-            <div class="text-primary/20 text-2xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">09</div>
+            <div class="text-primary/20 text-xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">09</div>
             <div class="space-y-1">
                 <h4 class="font-bold text-sm">Limitations of DIY Systems</h4>
                 <p class="text-[11px] text-on-surface-variant leading-normal">100 hours to build, breaks every 90 days</p>
             </div>
         </div>
         <div class="flex gap-4 group">
-            <div class="text-primary/20 text-2xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">10</div>
+            <div class="text-primary/20 text-xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">10</div>
             <div class="space-y-1">
                 <h4 class="font-bold text-sm">Introducing Miltha</h4>
                 <p class="text-[11px] text-on-surface-variant leading-normal">The system you just learned about, already built and ready</p>
             </div>
         </div>
         <div class="flex gap-4 group">
-            <div class="text-primary/20 text-2xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">11</div>
+            <div class="text-primary/20 text-xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">11</div>
             <div class="space-y-1">
                 <h4 class="font-bold text-sm">Real Use Cases</h4>
                 <p class="text-[11px] text-on-surface-variant leading-normal">Four creators, real numbers, real results</p>
             </div>
         </div>
         <div class="flex gap-4 group">
-            <div class="text-primary/20 text-2xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">12</div>
+            <div class="text-primary/20 text-xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">12</div>
             <div class="space-y-1">
                 <h4 class="font-bold text-sm">Advanced Content Strategies</h4>
                 <p class="text-[11px] text-on-surface-variant leading-normal">Content batching, growth loop, multi-platform dominance</p>
             </div>
         </div>
         <div class="flex gap-4 group">
-            <div class="text-primary/20 text-2xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">13</div>
+            <div class="text-primary/20 text-xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">13</div>
             <div class="space-y-1">
                 <h4 class="font-bold text-sm">The Future of AI Content</h4>
                 <p class="text-[11px] text-on-surface-variant leading-normal">One-person media companies are here</p>
             </div>
         </div>
         <div class="flex gap-4 group">
-            <div class="text-primary/20 text-2xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">14</div>
+            <div class="text-primary/20 text-xl font-extrabold transition-colors group-hover:text-primary/60 shrink-0">14</div>
             <div class="space-y-1">
                 <h4 class="font-bold text-sm">Your Next Move</h4>
                 <p class="text-[11px] text-on-surface-variant leading-normal">Three paths forward. One obvious choice.</p>
@@ -656,28 +660,28 @@
             <div class="bg-surface-container-low p-12 rounded-xl flex flex-col justify-between h-[400px] border border-outline-variant/10">
                 <span class="material-symbols-outlined text-primary text-3xl">smart_display</span>
                 <div>
-                    <h3 class="text-2xl font-bold mb-4">YouTubers</h3>
+                    <h3 class="text-xl font-bold mb-4">YouTubers</h3>
                     <p class="text-on-surface-variant text-sm">Turn every video into a newsletter, a thread, and 5 LinkedIn posts automatically.</p>
                 </div>
             </div>
             <div class="bg-surface-container p-12 rounded-xl flex flex-col justify-between h-[400px] mt-8 lg:mt-0">
                 <span class="material-symbols-outlined text-primary text-3xl">person</span>
                 <div>
-                    <h3 class="text-2xl font-bold mb-4">Solo Founders</h3>
+                    <h3 class="text-xl font-bold mb-4">Solo Founders</h3>
                     <p class="text-on-surface-variant text-sm">Build your personal brand while you build your product. No extra hours required.</p>
                 </div>
             </div>
             <div class="bg-surface-container-low p-12 rounded-xl flex flex-col justify-between h-[400px] mt-8 lg:mt-0">
                 <span class="material-symbols-outlined text-primary text-3xl">school</span>
                 <div>
-                    <h3 class="text-2xl font-bold mb-4">Coaches</h3>
+                    <h3 class="text-xl font-bold mb-4">Coaches</h3>
                     <p class="text-on-surface-variant text-sm">Stop trading time for content. Let AI nurture your leads through educational sequences.</p>
                 </div>
             </div>
             <div class="bg-surface-container p-12 rounded-xl flex flex-col justify-between h-[400px] mt-8 lg:mt-16">
                 <span class="material-symbols-outlined text-primary text-3xl">hub</span>
                 <div>
-                    <h3 class="text-2xl font-bold mb-4">Agencies</h3>
+                    <h3 class="text-xl font-bold mb-4">Agencies</h3>
                     <p class="text-on-surface-variant text-sm">Run content for 10 clients without hiring a 10-person team. One system, every brand.</p>
                 </div>
             </div>
@@ -724,7 +728,7 @@
 <!-- Playbook Final CTA -->
 <section class="py-32 px-6">
     <div class="max-w-5xl mx-auto bg-primary rounded-xl p-16 md:p-24 text-center space-y-10 bloom-shadow">
-        <h2 class="text-4xl md:text-6xl font-extrabold text-on-primary leading-tight">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-on-primary leading-tight">
             Stop creating manually. <br/>
             <span class="title-italic font-normal">Start distributing automatically.</span>
         </h2>
@@ -732,7 +736,7 @@
             <a href="https://checkout.dodopayments.com/buy/pdt_0Nd6EWxVSXm6A6iVjSe0j?quantity=1&redirect_url=https://miltha.vercel.app"
                target="_blank"
                rel="noopener noreferrer"
-               class="bg-on-primary text-primary px-12 py-6 rounded-full text-xl font-extrabold hover:scale-105 transition-all inline-block">
+               class="bg-on-primary text-primary px-12 py-6 rounded-full text-sm font-extrabold hover:scale-105 transition-all inline-block">
                 Get the Playbook — $15
             </a>
             <p class="text-on-primary/60 text-sm font-bold tracking-tight">One-time payment. Lifetime access.</p>
@@ -762,7 +766,7 @@
         <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
         <span class="text-[0.6875rem] font-extrabold uppercase tracking-widest text-primary-container">Launching Soon</span>
     </div>
-    <h1 class="text-[3.5rem] md:text-[5rem] font-bold tracking-tighter leading-tight max-w-4xl text-primary" style="position:relative;z-index:1;">
+    <h1 class="text-[3rem] md:text-[4rem] font-bold tracking-tighter leading-tight max-w-4xl text-primary" style="position:relative;z-index:1;">
         Upload once. <span class="font-serif italic font-light">Grow</span> everywhere. Your voice.
     </h1>
     <p class="mt-8 text-xl text-on-surface-variant max-w-2xl font-light leading-relaxed" style="position:relative;z-index:1;">
@@ -784,7 +788,7 @@
           style="flex:1;background:transparent;
             border:none;outline:none;padding:14px 20px;
             color:#e2e2e2;font-family:Almarai,sans-serif;
-            font-size:14px;"
+            font-size:13px;"
         />
         <input
           type="text"
@@ -799,7 +803,7 @@
           style="background:#fbf7e4;color:#323124;
             border:none;padding:14px 24px;
             font-family:Almarai,sans-serif;
-            font-weight:800;font-size:12px;
+            font-weight:800;font-size:10px;
             letter-spacing:0.08em;cursor:pointer;
             white-space:nowrap;">
           Get Early Access
@@ -818,7 +822,7 @@
 <section class="py-32 px-12 max-w-[1920px] mx-auto">
     <div class="grid lg:grid-cols-2 gap-24 items-center">
         <div>
-            <h2 class="text-4xl md:text-6xl font-bold tracking-tighter leading-tight text-primary">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tighter leading-tight text-primary">
                 You create great content. <br>
                 <span class="font-serif italic font-light text-on-surface-variant">Nobody</span> sees it.
             </h2>
@@ -828,15 +832,15 @@
         </div>
         <div class="stats-product-grid grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-surface-container-low p-8 rounded-xl bloom-shadow flex flex-col justify-between h-64 border border-outline-variant/5">
-                <span class="text-4xl font-bold text-primary-container">73%</span>
+                <span class="text-3xl font-bold text-primary-container">73%</span>
                 <p class="text-[0.6875rem] font-extrabold uppercase tracking-widest text-gray-500">Reach lost to lack of multi-platform strategy</p>
             </div>
             <div class="bg-surface-container-high p-8 rounded-xl flex flex-col justify-between h-64">
-                <span class="text-4xl font-bold text-primary-container">10 hrs</span>
+                <span class="text-3xl font-bold text-primary-container">10 hrs</span>
                 <p class="text-[0.6875rem] font-extrabold uppercase tracking-widest text-gray-500">Average time spent repurposing one video</p>
             </div>
             <div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between h-64 border border-outline-variant/5">
-                <span class="text-4xl font-bold text-primary-container">$180+</span>
+                <span class="text-3xl font-bold text-primary-container">$180+</span>
                 <p class="text-[0.6875rem] font-extrabold uppercase tracking-widest text-gray-500">Cost of outsourcing a single week of threads</p>
             </div>
         </div>
@@ -847,7 +851,7 @@
 <section class="py-32 bg-surface-container-lowest">
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-24">
-            <h2 class="text-4xl font-light tracking-tighter text-primary">From one video to <span class="font-serif italic text-primary-container">30 days</span> of content</h2>
+            <h2 class="text-3xl font-light tracking-tighter text-primary">From one video to <span class="font-serif italic text-primary-container">30 days</span> of content</h2>
         </div>
         <div class="grid md:grid-cols-3 gap-12">
             <div class="relative p-12 rounded-xl bg-surface-container border border-outline-variant/5">
@@ -874,7 +878,7 @@
     <div class="max-w-[1920px] mx-auto px-12">
         <div class="flex flex-col items-center mb-16">
             <span class="text-[0.6875rem] font-extrabold uppercase tracking-[0.2em] text-primary-container mb-4">The Neural Engine</span>
-            <h2 class="text-4xl font-bold text-center">Meet your new <span class="font-serif italic font-light">Editorial</span> Board</h2>
+            <h2 class="text-3xl font-bold text-center">Meet your new <span class="font-serif italic font-light">Editorial</span> Board</h2>
         </div>
         <div class="relative flex flex-col md:flex-row justify-between items-center gap-8 max-w-6xl mx-auto py-12">
             <div class="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-outline-variant/20 to-transparent -translate-y-1/2 hidden md:block"></div>
@@ -924,62 +928,62 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
                 <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">closed_caption</span>
-                <h4 class="font-bold text-lg mb-2">Transcription</h4>
+                <h4 class="font-bold text-base mb-2">Transcription</h4>
                 <p class="text-gray-500 text-sm font-light">Clean, accurate text extraction from any video or audio source.</p>
             </div>
             <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
                 <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">record_voice_over</span>
-                <h4 class="font-bold text-lg mb-2">Voice Matching</h4>
+                <h4 class="font-bold text-base mb-2">Voice Matching</h4>
                 <p class="text-gray-500 text-sm font-light">AI that learns your syntax, slang, and specific tone of voice.</p>
             </div>
             <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
                 <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">alt_route</span>
-                <h4 class="font-bold text-lg mb-2">Thread Generation</h4>
+                <h4 class="font-bold text-base mb-2">Thread Generation</h4>
                 <p class="text-gray-500 text-sm font-light">Multi-part X threads designed for maximum viral potential.</p>
             </div>
             <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
                 <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">auto_fix_high</span>
-                <h4 class="font-bold text-lg mb-2">Hook Lab</h4>
+                <h4 class="font-bold text-base mb-2">Hook Lab</h4>
                 <p class="text-gray-500 text-sm font-light">A/B test your video hooks before you even press publish.</p>
             </div>
             <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
                 <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">hub</span>
-                <h4 class="font-bold text-lg mb-2">Multi-Platform</h4>
+                <h4 class="font-bold text-base mb-2">Multi-Platform</h4>
                 <p class="text-gray-500 text-sm font-light">Native formatting for LinkedIn, X, and YouTube. No copy-paste. No manual reformatting.</p>
             </div>
             <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
                 <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">analytics</span>
-                <h4 class="font-bold text-lg mb-2">Deep Analytics</h4>
+                <h4 class="font-bold text-base mb-2">Deep Analytics</h4>
                 <p class="text-gray-500 text-sm font-light">Track which agent-written content performs the best.</p>
             </div>
             <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
                 <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">group_add</span>
-                <h4 class="font-bold text-lg mb-2">Ghostwriter Mode</h4>
+                <h4 class="font-bold text-base mb-2">Ghostwriter Mode</h4>
                 <p class="text-gray-500 text-sm font-light">Perfect for agencies managing multiple high-profile clients.</p>
             </div>
             <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
                 <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">smart_toy</span>
-                <h4 class="font-bold text-lg mb-2">Custom Agents</h4>
+                <h4 class="font-bold text-base mb-2">Custom Agents</h4>
                 <p class="text-gray-500 text-sm font-light">Train specialized agents on your unique knowledge base.</p>
             </div>
             <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
                 <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">calendar_month</span>
-                <h4 class="font-bold text-lg mb-2">Smart Calendar</h4>
+                <h4 class="font-bold text-base mb-2">Smart Calendar</h4>
                 <p class="text-gray-500 text-sm font-light">Auto-fills your schedule based on audience peak activity.</p>
             </div>
             <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
                 <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">palette</span>
-                <h4 class="font-bold text-lg mb-2">Brand Styles</h4>
+                <h4 class="font-bold text-base mb-2">Brand Styles</h4>
                 <p class="text-gray-500 text-sm font-light">Ensures visual consistency across all generated assets.</p>
             </div>
             <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
                 <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">history</span>
-                <h4 class="font-bold text-lg mb-2">Semantic History</h4>
+                <h4 class="font-bold text-base mb-2">Semantic History</h4>
                 <p class="text-gray-500 text-sm font-light">Miltha remembers what you've said to avoid repetition.</p>
             </div>
             <div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
                 <span class="material-symbols-outlined text-primary-container mb-4 text-3xl">language</span>
-                <h4 class="font-bold text-lg mb-2">Global Voices</h4>
+                <h4 class="font-bold text-base mb-2">Global Voices</h4>
                 <p class="text-gray-500 text-sm font-light">Support for 24+ languages with native localizations.</p>
             </div>
         </div>
@@ -992,17 +996,17 @@
         <div class="grid md:grid-cols-3 gap-8">
             <div class="p-12 rounded-xl bg-surface-container-low bloom-shadow border border-outline-variant/5 text-center">
                 <span class="material-symbols-outlined text-4xl text-primary mb-6">timer</span>
-                <h4 class="font-bold text-lg mb-2">Any Duration</h4>
+                <h4 class="font-bold text-base mb-2">Any Duration</h4>
                 <p class="text-gray-500 font-light">7 days, 15 days, or 30 days. Run your content calendar as long as you need.</p>
             </div>
             <div class="p-12 rounded-xl bg-surface-container-low bloom-shadow border border-outline-variant/5 text-center">
                 <span class="material-symbols-outlined text-4xl text-primary mb-6">dynamic_feed</span>
-                <h4 class="font-bold text-lg mb-2">Any Frequency</h4>
+                <h4 class="font-bold text-base mb-2">Any Frequency</h4>
                 <p class="text-gray-500 font-light">Daily posts or weekly deep-dive threads.</p>
             </div>
             <div class="p-12 rounded-xl bg-surface-container-low bloom-shadow border border-outline-variant/5 text-center">
                 <span class="material-symbols-outlined text-4xl text-primary mb-6">layers</span>
-                <h4 class="font-bold text-lg mb-2">Any Platform</h4>
+                <h4 class="font-bold text-base mb-2">Any Platform</h4>
                 <p class="text-gray-500 font-light">Twitter, LinkedIn, YouTube — or all three. Pick your platforms. Change anytime.</p>
             </div>
         </div>
@@ -1014,44 +1018,44 @@
     <div class="max-w-[1920px] mx-auto">
         <div class="text-center mb-20">
             <span class="text-[0.6875rem] font-extrabold uppercase tracking-[0.2em] text-primary-container mb-4 block">Built For</span>
-            <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-primary">If you create content, Miltha is built for you.</h2>
+            <h2 class="text-3xl md:text-3xl font-bold tracking-tighter text-primary">If you create content, Miltha is built for you.</h2>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
             <div class="p-8 rounded-2xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container transition-all">
-                <h4 class="text-lg font-bold mb-3 text-primary">YouTubers</h4>
+                <h4 class="text-base font-bold mb-3 text-primary">YouTubers</h4>
                 <p class="text-gray-400 font-light text-sm leading-relaxed">You spend 10 hours making one video. Miltha turns every upload into a full month of Twitter threads, LinkedIn posts, and YouTube Shorts — automatically.</p>
             </div>
             <div class="p-8 rounded-2xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container transition-all">
-                <h4 class="text-lg font-bold mb-3 text-primary">Streamers</h4>
+                <h4 class="text-base font-bold mb-3 text-primary">Streamers</h4>
                 <p class="text-gray-400 font-light text-sm leading-relaxed">Your streams are full of valuable moments. Miltha pulls the highlights, writes the captions, and gets them on every platform while you focus on your next stream.</p>
             </div>
             <div class="p-8 rounded-2xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container transition-all">
-                <h4 class="text-lg font-bold mb-3 text-primary">Podcasters</h4>
+                <h4 class="text-base font-bold mb-3 text-primary">Podcasters</h4>
                 <p class="text-gray-400 font-light text-sm leading-relaxed">Every episode is packed with insights your audience needs. Miltha turns each episode into social posts, LinkedIn articles, and thread content automatically.</p>
             </div>
             <div class="p-8 rounded-2xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container transition-all">
-                <h4 class="text-lg font-bold mb-3 text-primary">Solo Founders</h4>
+                <h4 class="text-base font-bold mb-3 text-primary">Solo Founders</h4>
                 <p class="text-gray-400 font-light text-sm leading-relaxed">Building a personal brand while running a company is brutal. Miltha keeps you visible on every platform without adding hours to your week.</p>
             </div>
             <div class="p-8 rounded-2xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container transition-all">
-                <h4 class="text-lg font-bold mb-3 text-primary">Coaches and Educators</h4>
+                <h4 class="text-base font-bold mb-3 text-primary">Coaches and Educators</h4>
                 <p class="text-gray-400 font-light text-sm leading-relaxed">Your knowledge changes lives. Miltha makes sure it reaches the people who need it — on Twitter, LinkedIn, and YouTube — consistently every week.</p>
             </div>
             <div class="p-8 rounded-2xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container transition-all">
-                <h4 class="text-lg font-bold mb-3 text-primary">Course Creators</h4>
+                <h4 class="text-base font-bold mb-3 text-primary">Course Creators</h4>
                 <p class="text-gray-400 font-light text-sm leading-relaxed">Every lesson you teach is content. Miltha repurposes your course material into social posts that drive new students to your programs.</p>
             </div>
             <div class="p-8 rounded-2xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container transition-all">
-                <h4 class="text-lg font-bold mb-3 text-primary">Thought Leaders</h4>
+                <h4 class="text-base font-bold mb-3 text-primary">Thought Leaders</h4>
                 <p class="text-gray-400 font-light text-sm leading-relaxed">Your ideas deserve a bigger audience. Miltha distributes your thinking across every platform in your voice — building your authority while you sleep.</p>
             </div>
             <div class="p-8 rounded-2xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container transition-all">
-                <h4 class="text-lg font-bold mb-3 text-primary">Marketing Agencies</h4>
+                <h4 class="text-base font-bold mb-3 text-primary">Marketing Agencies</h4>
                 <p class="text-gray-400 font-light text-sm leading-relaxed">Managing multiple client accounts means multiple content calendars. Miltha scales your output without scaling your team or your hours.</p>
             </div>
         </div>
         <div class="mt-16 text-center">
-            <p class="text-on-surface-variant font-light text-lg">If you create valuable content and struggle to distribute it consistently — Miltha is for you.</p>
+            <p class="text-on-surface-variant font-light text-base">If you create valuable content and struggle to distribute it consistently — Miltha is for you.</p>
         </div>
     </div>
 </section>
@@ -1061,7 +1065,7 @@
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <span class="label-caps text-primary-container tracking-[0.3em] block mb-4">PRICING</span>
-            <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-primary">Simple pricing. <span class="font-serif italic font-light">No surprises.</span></h2>
+            <h2 class="text-3xl md:text-3xl font-bold tracking-tighter text-primary">Simple pricing. <span class="font-serif italic font-light">No surprises.</span></h2>
         </div>
 
         <!-- Coming soon note -->
@@ -1078,7 +1082,7 @@
                 <div class="mb-8">
                     <span class="label-caps text-on-surface-variant tracking-[0.2em] block mb-6">STARTER</span>
                     <div class="flex items-end gap-2 mb-2">
-                        <span class="text-6xl font-black text-primary">$29</span>
+                        <span class="text-4xl font-black text-primary">$29</span>
                         <span class="text-gray-500 mb-2">/mo</span>
                     </div>
                     <span class="inline-block text-[0.6875rem] font-extrabold uppercase tracking-widest text-primary-container bg-surface-container px-3 py-1 rounded-full mb-4">3-day free trial</span>
@@ -1107,7 +1111,7 @@
                 <div class="mb-8 mt-2">
                     <span class="label-caps text-primary tracking-[0.2em] block mb-6">PRO</span>
                     <div class="flex items-end gap-2 mb-2">
-                        <span class="text-6xl font-black text-primary">$49</span>
+                        <span class="text-4xl font-black text-primary">$49</span>
                         <span class="text-gray-500 mb-2">/mo</span>
                     </div>
                     <span class="inline-block text-[0.6875rem] font-extrabold uppercase tracking-widest text-primary-container bg-surface-container-low px-3 py-1 rounded-full mb-4">3-day free trial</span>
@@ -1134,7 +1138,7 @@
                 <div class="mb-8">
                     <span class="label-caps text-on-surface-variant tracking-[0.2em] block mb-6">AGENCY</span>
                     <div class="flex items-end gap-2 mb-2">
-                        <span class="text-6xl font-black text-primary">$99</span>
+                        <span class="text-4xl font-black text-primary">$99</span>
                         <span class="text-gray-500 mb-2">/mo</span>
                     </div>
                     <span class="inline-block text-[0.6875rem] font-extrabold uppercase tracking-widest text-primary-container bg-surface-container px-3 py-1 rounded-full mb-4">3-day free trial</span>
@@ -1171,7 +1175,7 @@
 <section class="py-48 px-12 relative overflow-hidden">
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-primary-container/5 rounded-full blur-[120px] -z-10"></div>
     <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8 text-primary">The future of content <br> is <span class="font-serif italic font-light">autonomous</span>.</h2>
+        <h2 class="text-3xl md:text-3xl font-bold tracking-tighter mb-8 text-primary">The future of content <br> is <span class="font-serif italic font-light">autonomous</span>.</h2>
         <p class="text-xl text-gray-400 mb-12 max-w-xl mx-auto font-light">Be first when Miltha launches. Get founding member pricing — locked forever.</p>
         <form onsubmit="handleWaitlist(event)"
           style="max-width:420px;margin:32px auto 0;">
@@ -1204,7 +1208,7 @@
               style="background:#fbf7e4;color:#323124;
                 border:none;padding:14px 24px;
                 font-family:Almarai,sans-serif;
-                font-weight:800;font-size:12px;
+                font-weight:800;font-size:10px;
                 letter-spacing:0.08em;cursor:pointer;
                 white-space:nowrap;">
               Get Early Access
