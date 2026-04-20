@@ -15,6 +15,6 @@
   ],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/((?!miltha-logo.svg|robots.txt|sitemap.xml).*)", "destination": "/index.html" }
+    { "source": "/((?!miltha-logo.svg|favicon.svg|favicon-180.svg|robots.txt|sitemap.xml|og-image.png).*)", "destination": "/index.html" }
   ]
 }
